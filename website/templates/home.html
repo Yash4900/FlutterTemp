@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+{% block content %}
+<br>
+	<div class="container col-md-10 col-sm-12">
+		<div class="row py-8">
+			<div class="col-md-6 col-sm-12 svg d-flex">
+				<img src="{{ url_for('static', filename='images/home.svg') }}" width="85%" class="floating" alt=""/>
+			</div>
+			<div class="col-md-6 col-sm-12 name">
+				<p style="font-size: 3rem;" class="p-0 m-0 name text-center">Hello I'm</p>	
+				<b><p style="font-size: 3rem;" class="p-0 m-0 name text-center" id="name"></p></b>
+				
+				<div class="description" data-aos="fade-up" data-aos-duration="1000">
+					<p style="color: grey;">Creative person. Love working on projects. Eager to learn new things.</p>
+				</div>
+				<div class="resume container-fluid d-flex justify-content-center" data-aos="fade-up" data-aos-duration="1000">
+					<a class="btn btn-sm btn-outline-dark" href="./static/Resume.pdf">View Resume</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script>
+		var i = 0;
+		var txt = 'Yash Satra';
+		var delay = 130;
+
+		window.onload = function typeWriter() {
+			if (i < txt.length) {
+				document.getElementById("name").innerHTML += txt.charAt(i);
+				i++;
+				setTimeout(typeWriter, delay);
+			}
+		}	
+	</script>
+{% endblock content %}

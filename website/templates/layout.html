@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+
+	<!-- Bootstrap CSS -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet"
+		href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css">
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+	<!-- Custome style -->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
+	{% if title %}
+	<title>yashsatra - {{ title }}</title>
+	{% else %}
+	<title>yashsatra</title>
+	{% endif %}
+
+</head>
+
+<body>
+	<script>
+		AOS.init();
+	</script>
+
+	<!-- Navbar -->
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+		<div class="container-fluid">
+			<!-- <a class="navbar-brand" href="#">Yash Satra</a> -->
+			<img src="{{url_for('static', filename='images/profile.jpg')}}" alt=""
+				style="border-radius: 50%; height: 30px;">
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+				aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse lex" id="navbarNav">
+				<ul class="navbar-nav" style="margin-left: auto;">
+					{% if title=='Home' %}
+					<li class="nav-item">
+						<a style="font-weight: 600; font-size: 16px;" class="nav-link active" style="border-bottom: white 2px solid;" aria-current="page"
+							href="/">Home</a>
+					</li>
+					{% else %}
+					<li class="nav-item">
+						<a style="font-weight: 600; font-size: 16px;" class="nav-link" aria-current="page" href="/">Home</a>
+					</li>
+					{% endif %}
+
+					{% if title=='Projects' %}
+					<li class="nav-item">
+						<a style="font-weight: 600; font-size: 16px;" class="nav-link active" aria-current="page" style="border-bottom: white 2px solid;"
+							href="/projects">Projects</a>
+					</li>
+					{% else %}
+					<li class="nav-item">
+						<a style="font-weight: 600; font-size: 16px;" class="nav-link" aria-current="page" href="/projects">Projects</a>
+					</li>
+					{% endif %}
+<!-- 
+					{% if title=='Art' %}
+					<li class="nav-item">
+						<a style="font-weight: 600; font-size: 16px;" class="nav-link active" aria-current="page" style="border-bottom: white 2px solid;"
+							href="/art">Art</a>
+					</li>
+					{% else %}
+					<li class="nav-item">
+						<a style="font-weight: 600; font-size: 16px;" class="nav-link" aria-current="page" href="/art">Art</a>
+					</li>
+					{% endif %} -->
+
+					{% if title=='Contact' %}
+					<li class="nav-item">
+						<a style="font-weight: 600; font-size: 16px;" class="nav-link active" aria-current="page" style="border-bottom: white 2px solid;"
+							href="/contact">Contact</a>
+					</li>
+					{% else %}
+					<li class="nav-item">
+						<a style="font-weight: 600; font-size: 16px;" class="nav-link" aria-current="page" href="/contact">Contact</a>
+					</li>
+					{% endif %}
+
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<br><br>
+	{% block content %}
+	{% endblock %}
+
+	<!-- Footer -->
+	<div class="space"></div>
+	<footer class="footer container-fluid">
+
+		<div class="container col-md-6 col-sm-12 text-center p-2">
+			<a class="fa fa-github p-2" style="font: size 18px; color: white; text-decoration: none;"
+				href="https://github.com/Yash4900"></a>
+			<a class="fa fa-facebook p-2" style="font: size 18px; color: white; text-decoration: none;"
+				href="https://www.facebook.com/profile.php?id=100011460953259"></a>
+			<a class="fa fa-linkedin p-2" style="font: size 18px; color: white; text-decoration: none;" href=""></a>
+			<a class="fa fa-youtube p-2" style="font: size 18px; color: white; text-decoration: none;"
+				href="https://www.youtube.com/channel/UCws0Ke2auKhLXqaOS0kw3tg"></a>
+		</div>
+
+		<!-- Copyright -->
+		<div class="container col-md-6 col-sm-12 text-center" style="color: white;">
+			<small style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;"> © 2021 Copyright: Made using
+				Flask</small>
+		</div>
+		<!-- Copyright -->
+
+	</footer>
+	<!-- Footer -->
+
+	<!-- Optional JavaScript; choose one of the two! -->
+
+	<!-- Option 1: Bootstrap Bundle with Popper -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+		crossorigin="anonymous"></script>
+
+</body>
+
+</html>

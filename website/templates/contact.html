@@ -1,0 +1,107 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="container col-md-6 col-sm-12">
+  <div class="row py-8">
+    <div class="col-md-6 my-auto">
+      <b>
+        <p style="font-size: 3rem; line-height: 1;" class="p-0 m-0" id="name">Contact Me</p>
+      </b>
+    </div>
+    <div class="col-md-6 svg">
+      <img src="{{ url_for('static', filename='images/contact.svg') }}" class="floating" width="85%" alt="" />
+    </div>
+  </div>
+</div>
+<br>
+<br>
+<div class="m-2">
+  <div class="container card shadow col-md-6 col-sm-12">
+    <form action="/contact" method="POST">
+      <br>
+      <div class="form-group">
+        <label for="email">Email address <span class="req">*</span></label>
+        <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com">
+      </div>
+      {% if (errors["email"] != "") %}
+      <small style="color: red;">{{ errors["email"] }}</small>
+      {% endif %}
+      <br>
+      <div class="form-group">
+        <label for="subject">Subject <span class="req">*</span></label>
+        <input type="text" class="form-control" id="subject" name="subject" placeholder="Enter Subject">
+      </div>
+      {% if (errors["subject"] != "") %}
+      <small style="color: red;">{{ errors["subject"] }}</small>
+      {% endif %}
+      <br>
+      <div class="form-group">
+        <label for="message">Message <span class="req">*</span></label>
+        <textarea class="form-control" id="message" name="message" rows="3"></textarea>
+      </div>
+      {% if (errors["message"] != "") %}
+      <small style="color: red;">{{ errors["message"] }}</small>
+      {% endif %}
+      <br>
+      <button type="submit" class="btn btn-sm btn-outline-dark">Send</button>
+    </form>
+    <br>
+    <br>
+    {% if success %}
+    <div class="alert alert-success" role="alert">
+      Form submitted successfully!
+    </div>
+    {% endif %}
+    <br>
+  </div>
+</div>
+<br>
+<br>
+<!-- Contact Info -->
+<div class="container col-md-10 col-sm-12">
+  <div class="row">
+    <div class="col-md-4 col-sm-12">
+      <div class="card shadow m-3 p-3" data-aos="fade-up" data-aos-duration="1000">
+        <div class="row">
+          <div class="col-4" style="text-align: center;">
+            <i class="fa fa-phone p-3" aria-hidden="true" style="font-size: 25px; color: rgb(0, 129, 222);"></i>
+          </div>
+          <div class="col-8">
+            <b>Phone</b><br>
+            <small style="color: grey;">+91 8879317366</small>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 col-sm-12">
+      <div class="card shadow m-3 p-3" data-aos="fade-up" data-aos-duration="1000">
+        <div class="row">
+          <div class="col-4" style="text-align: center;">
+            <i class="fa fa-envelope p-3" aria-hidden="true" style="font-size: 25px; color: rgb(0, 129, 222);"></i>
+          </div>
+          <div class="col-8">
+            <b>Email</b><br>
+            <small style="color: grey;">yashsatra333@gmail.com</small>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 col-sm-12">
+      <div class="card shadow m-3 p-3" data-aos="fade-up" data-aos-duration="1000">
+        <div class="row">
+          <div class="col-4" style="text-align: center;">
+            <i class="fa fa-map-marker p-3" aria-hidden="true" style="font-size: 25px; color: rgb(0, 129, 222);"></i>
+          </div>
+          <div class="col-8">
+            <b>Location</b><br>
+            <small style="color: grey;">Mumbai, Maharashtra.</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+{% endblock content %}

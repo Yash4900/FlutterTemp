@@ -1,0 +1,143 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="container col-md-6 col-sm-12">
+    <div class="row">
+        <div class="col-md-6 my-auto">
+            <b>
+                <p style="font-size: 3rem;" class="p-0 m-0" id="name">Projects</p>
+            </b>
+        </div>
+        <div class="col-md-6 svg">
+            <img src="{{ url_for('static', filename='images/project.svg') }}" class="floating" width="85%" alt="" />
+        </div>
+    </div>
+</div>
+<br>
+<br>
+<div class="container col-md-8 col-sm-12">
+    <div class="row">
+        <div class="col-md-4 col-sm-12">
+            <div class="p-3 m-2 border project-card bg-white rounded shadow" data-aos="fade-right"
+                data-aos-duration="1000">
+                <p class="p-h">Faculty Feedback System</p>
+                <img class="img-center" src="{{ url_for('static', filename='pimg/ffs.png') }}" width="65%" alt="">
+                <div>
+                    <p class="pr-desc">A system through which the process of faculty feedback is automated.
+                        Authorities can manage
+                        students, courses and faculty; Generate reports for faculties based on feedback.</p>
+                </div>
+                <div>
+                    <a href="https://github.com/Yash4900/FacultyFeedbackSystem">View Github</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-12">
+            <div class="p-3 m-2 border project-card bg-white rounded shadow" data-aos="fade-up"
+                data-aos-duration="1000">
+                <p class="p-h">IUCEE Website Redevelopment Project</p>
+                <img class="img-center" src="{{ url_for('static', filename='pimg/IUCEE.jpg') }}" width="65%" alt="">
+                <div>
+                    <p class="pr-desc">Redesign the website of the IUCEE organization.</p>
+                </div>
+                <div>
+                    <a href="https://iucee.org/">Website Link</a>
+                </div>
+                <div>
+                    <a href="https://github.com/Yash4900/IUCEE-Custom-JS-CSS">View Github</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-12">
+            <div class="p-3 m-2 border project-card bg-white rounded shadow" data-aos="fade-left"
+                data-aos-duration="1000">
+                <p class="p-h">Food ordering app</p>
+                <img class="img-center" src="https://firebase.flutter.dev/img/flutterfire.svg" width="65%" alt="">
+                <div>
+                    <p class="pr-desc">An app for those customers want to eat home prepared food and home chefs who
+                        want to earn
+                        through their passion of cooking.</p>
+                </div>
+                <div>
+                    <a href="https://github.com/hasti-15/Flutter-Internship">View Github</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4 col-sm-12">
+            <div class="p-3 m-2 border project-card bg-white rounded shadow" data-aos="fade-right"
+                data-aos-duration="1000">
+                <p class="p-h">COVID Tracker</p>
+                <img class="img-center" src="https://www.python.org/static/img/python-logo.png" width="65%" alt="">
+                <div>
+                    <p class="pr-desc">Desktop application for getting notifications regarding the number of cases,
+                        deaths, cured in
+                        varous states of India.</p>
+                </div>
+                <div>
+                    <a href="https://github.com/Yash4900/Realtime-CoronaVirus-Notification-System">View Github</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-12">
+            <div class="p-3 m-2 border project-card bg-white rounded shadow" data-aos="fade-up"
+                data-aos-duration="1000">
+                <p class="p-h">Ecommerce App</p>
+                <img class="img-center" src="{{ url_for('static', filename='pimg/logo.png') }}" width="65%" alt="">
+                <div>
+                    <p class="pr-desc">A prototype of a web store for selling electronic products. Built using MEAN
+                        stack.</p>
+                </div>
+                <div>
+                    <a href="https://github.com/Yash4900/FSDL_Project/tree/master/College">View Github</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-12">
+            <div class="p-3 m-2 border project-card bg-white rounded shadow" data-aos="fade-left"
+                data-aos-duration="1000">
+                <p class="p-h">Drowsiness Detection System</p>
+                <div>
+                    <p class="pr-desc">This system monitors drowsiness by detecting the driver's face and sending a
+                        drowsiness alert
+                        if his eyes have been closed for a certain number of frames.</p>
+                </div>
+                <div>
+                    <a href="https://github.com/rubyruins/driver-drowsiness-detection">View Github</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4 col-sm-12" data-aos="fade-right" data-aos-duration="1000">
+            <div class="p-3 m-2 border project-card bg-white rounded shadow">
+                <p class="p-h">LangChat</p>
+                <img class="img-center" src="{{ url_for('static', filename='pimg/applogo.png') }}" width="65%" alt="">
+                <div>
+                    <p class="pr-desc">App which translates messages (text and audio) made by the other user in some
+                        language to the
+                        language set by user himself. Since variety of languages and nuances exist in the world,
+                        language barrier in communication does exist.</p>
+                </div>
+                <div>
+                    <a href="https://github.com/devansh2805/LangChat">View Github</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-12" data-aos="fade-up" data-aos-duration="1000">
+            <div class="p-3 m-2 border project-card bg-white rounded shadow">
+                <p class="p-h">GameHub</p>
+                <img class="img-center" src="{{ url_for('static', filename='pimg/gamehub.png') }}" width="65%" alt="">
+                <div>
+                    <p class="pr-desc">A Desktop GUI application comprising of three classical games i.e. Snakes,
+                        Car Race and
+                        Flappy bird built using Python.</p>
+                </div>
+                <div>
+                    <a href="https://github.com/Yash4900/GameHub-">View Github</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}

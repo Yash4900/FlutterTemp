@@ -1,0 +1,62 @@
+{% extends "layout.html" %}
+{% block content %}
+<!-- Gallery -->
+
+<div class="container col-md-10 col-sm-12">
+	<div class="row py-8">
+		<div class="col-md-3"></div>
+		<div class="col-md-3 col-sm-12 my-auto">
+			<b><p style="font-size: 3rem; padding-left: 10%;" id="name">Art</p></b>
+		</div>
+		<div class="col-md-6 col-sm-12 svg">
+			<img src="{{ url_for('static', filename='images/art.svg') }}" class="floating" width="70%" alt=""/>
+		</div>
+	</div>
+</div>
+<br>
+<br>
+<div class="container col-md-8 col-sm-12">
+	<div class="row">
+	  <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
+	    <img src="{{ url_for('static', filename='images/hw.jpg') }}"
+	      class="w-100 shadow-1-strong mb-4 zoom rounded" alt=""/>
+
+	    <img src="{{ url_for('static', filename='images/lab.jpg') }}"
+	      class="w-100 shadow-1-strong mb-4 zoom rounded" alt=""/>
+
+		<img src="{{ url_for('static', filename='images/lamb.jpg') }}"
+	      class="w-100 shadow-1-strong mb-4 zoom rounded" alt=""/>
+
+		  <img src="{{ url_for('static', filename='images/lamb2.jpg') }}"
+	      class="w-100 shadow-1-strong mb-4 zoom rounded" alt=""/>
+	  </div>
+
+	  <div class="col-lg-4 mb-4 mb-lg-0">
+
+	    <img src="{{ url_for('static', filename='images/cpu.jpg') }}"
+	      class="w-100 shadow-1-strong mb-4 zoom rounded" alt=""/>
+
+		<img src="{{ url_for('static', filename='images/messi.jpg') }}"
+	      class="w-100 shadow-1-strong mb-4 zoom rounded" alt=""/>
+
+		<img src="{{ url_for('static', filename='images/lamb3.jpg') }}"
+	      class="w-100 shadow-1-strong mb-4 zoom rounded" alt=""/>
+	  </div>
+
+	  <div class="col-lg-4 mb-4 mb-lg-0">
+	    <img src="{{ url_for('static', filename='images/city.jpg') }}"
+	      class="w-100 shadow-1-strong mb-4 zoom rounded" alt=""/>
+
+	    <img src="{{ url_for('static', filename='images/arch.jpg') }}"
+	      class="w-100 shadow-1-strong mb-4 zoom rounded" alt=""/>
+
+		<img src="{{ url_for('static', filename='images/captain.jpg') }}"
+	      class="w-100 shadow-1-strong mb-4 zoom rounded" alt=""/>
+
+		<img src="{{ url_for('static', filename='images/cycle.jpg') }}"
+	      class="w-100 shadow-1-strong mb-4 zoom rounded" alt=""/>
+	  </div>
+	</div>
+</div>
+<!-- Gallery -->
+{% endblock content %}
