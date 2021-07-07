@@ -2,6 +2,10 @@
 
 Link: https://yash4900.herokuapp.com/
 
-[![Made withJupyter](https://img.shields.io/badge/Made%20with-Flask-black?style=for-the-badge&logo=flask)](https://jupyter.org/try)
+**Made using**
 
-[![Made withJupyter](https://img.shields.io/badge/Deployed%20on-Heroku-purple?style=for-the-badge&logo=heroku)](https://jupyter.org/try)
+<span><img src="https://www.vectorlogo.zone/logos/pocoo_flask/pocoo_flask-ar21.svg" /></span>
+
+**Deployed on**
+
+<span><img src="https://www.vectorlogo.zone/logos/heroku/heroku-ar21.svg" /></span>
